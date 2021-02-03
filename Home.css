@@ -1,0 +1,12 @@
+
+#header{
+	border: 5px dashed lightblue;
+	width: 1400px;
+	height: 100px;
+	background-color: blue;
+	color: white;
+	margin-top: 10px;
+	line-height: 50px;
+	padding-left: 10px;
+	text-align: center;
+}
