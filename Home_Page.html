@@ -1,0 +1,181 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<title>Exercise 1</title>
+	<link href="Test2.css" rel="stylesheet"/>
+</head>
+<body>
+<style>
+.grid-container {
+  display: grid;
+  grid-template-columns: 650px 650px;
+  grid-gap: 6px;
+  background-color: #1e90ff;
+  padding: 10px;
+  justify-content: center;
+}
+
+.grid-container > div {
+  background-color:#000000;
+  border: 5px solid #ffd700;
+  text-align: center;
+  padding: 20px 0;
+  font-size: 30px;
+  color: #ffd700;
+}
+
+.box1 {
+  grid-row: 1 / 2;
+}
+
+a:link {
+  color: #FFFFFF;
+  background-color: transparent;
+  text-decoration: none;
+}
+a:visited {
+  color: #ffd700;
+  background-color: transparent;
+  text-decoration: none;
+}
+a:hover {
+  color: #ffd700;
+  background-color: transparent;
+  text-decoration: underline;
+}
+a:active {
+  color: 	#FF6347;
+  background-color: transparent;
+  text-decoration: underline;
+}
+
+.footer {
+  position: fixed;
+  left: 0;
+  bottom: 0;
+  width: 100%;
+  background-color: white;
+  color: blue;
+  text-align: center;
+}
+
+</style>
+<nav>
+  <ul>
+    <img class ="logo" src="images/Logo.png" id="logo"/>
+    <li><a href="#">Home Page</a>
+    </li>
+    <li><a href="#">Information</a>
+    </li>
+    <li><a href="#">Gallery</a>
+    </li>
+    <li><a href="#">Check Out</a>
+    </li>
+    <li><a href="#">Contact Us</a>
+    </li>
+  </ul>
+</nav>
+
+<h2>Automatic Slideshow</h2>
+<p>Austies:</p>
+
+<div class="slideshow-container">
+
+<div class="mySlides fade">
+  <div class="numbertext">1 / 3</div>
+  <img src="images/austies.jpg" style="width:100%">
+</div>
+
+<div class="mySlides fade">
+  <div class="numbertext">2 / 3</div>
+  <img src="images/Rosses.jpg" style="width:100%">
+</div>
+
+<div class="mySlides fade">
+  <div class="numbertext">3 / 3</div>
+  <img src="images/view.jpg" style="width:100%">
+</div>
+
+</div>
+<br>
+
+<div style="text-align:center">
+  <span class="dot"></span> 
+  <span class="dot"></span> 
+  <span class="dot"></span> 
+</div>
+
+<script>
+var slideIndex = 0;
+showSlides();
+
+function showSlides() {
+  var i;
+  var slides = document.getElementsByClassName("mySlides");
+  var dots = document.getElementsByClassName("dot");
+  for (i = 0; i < slides.length; i++) {
+    slides[i].style.display = "none";  
+  }
+  slideIndex++;
+  if (slideIndex > slides.length) {slideIndex = 1}    
+  for (i = 0; i < dots.length; i++) {
+    dots[i].className = dots[i].className.replace(" active", "");
+  }
+  slides[slideIndex-1].style.display = "block";  
+  dots[slideIndex-1].className += " active";
+  setTimeout(showSlides, 2000); // Change image every 2 seconds
+}
+</script>
+
+<div id="home">
+<div class="grid-container">
+
+  <div class="box1">  
+  <div class="responsive">
+  <div class="gallery">
+    <a target="_blank" href="images/austies.jpg">
+      <img src="images/austies.jpg" alt="Austies" width="600" height="493">
+    </a>
+    <div class="desc"><br><br></div>
+  </div>
+</div>
+</div>
+
+  <div class="box2">  
+  <div class="responsive">
+  <div class="gallery">
+    <div class="desc">Here is an image of Austies</div>
+  </div>
+</div>
+</div>  
+
+  <div class="box3">  
+  <div class="responsive">
+  <div class="gallery">
+    <div class="desc">Here is the view from Austies</div>
+  </div>
+</div>
+</div>
+
+  <div class="box4">  
+  <div class="responsive">
+  <div class="gallery">
+    <a target="_blank" href="image/view.jpg">
+      <img src="images/view.jpg" alt="Red Bull" width="600" height="493">
+    </a>
+  </div>
+</div>
+</div>  
+  
+</div>
+</div>
+<br>
+<br>
+<br>
+<br>
+<div class="footer">
+  <p><b>Austies</b></p>
+</div>
+
+	</body>
+</html>
